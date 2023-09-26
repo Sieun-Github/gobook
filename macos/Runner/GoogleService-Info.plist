@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyB3BtoUHeKZxp5aIp0gzPqDrmV-Fw3pK1U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>240342413009</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sudarlife.gobook.RunnerTests</string>
+	<key>PROJECT_ID</key>
+	<string>gobook-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gobook-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:240342413009:ios:07571f91162e5bcdf09ff0</string>
+</dict>
+</plist>

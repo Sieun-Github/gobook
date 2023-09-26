@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gobook/src/imsi/detail.dart';
-import 'package:gobook/src/imsi/home.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -16,16 +14,7 @@ class _MyWidgetState extends State<App> {
   void initState() {
     super.initState();
     router = GoRouter(
-      routes: [
-        GoRoute(
-          path: '/',
-          builder: (context, state) => const Home(),
-        ),
-        GoRoute(
-          path: '/detail',
-          builder: (context, state) => const Detail(),
-        ),
-      ],
+      routes: [],
       initialLocation: '/',
     );
   }

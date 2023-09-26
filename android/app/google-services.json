@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "240342413009",
+    "project_id": "gobook-app",
+    "storage_bucket": "gobook-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:240342413009:android:a6c51862617ed23bf09ff0",
+        "android_client_info": {
+          "package_name": "com.sudarlife.gobook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA-qJCWL5tnQkCRNbhE2SyjKyIW4yDFnCU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
