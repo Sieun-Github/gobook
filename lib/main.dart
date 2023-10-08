@@ -5,9 +5,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gobook/firebase_options.dart';
 import 'package:gobook/src/app.dart';
+import 'package:gobook/src/common/cubit/app_data_load_cubit.dart';
 import 'package:gobook/src/common/interceptor/custom_interceptor.dart';
 import 'package:gobook/src/common/model/naver_book_search_options.dart';
 import 'package:gobook/src/common/naver_api_repository.dart';
+import 'package:gobook/src/splash/cubit/splash_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,21 +31,16 @@ class MyApp extends StatelessWidget {
           create: (context) => NaverBookRepository(dio),
         )
       ],
-      child: Builder(
-          builder: (context) => FutureBuilder(
-              future: context.read<NaverBookRepository>().searchBooks(
-                    const NaverBookSearchOption.init(query: '플러터'),
-                  ),
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return MaterialApp(
-                    home: Center(
-                      child: Text('${snapshot.data?.items?.length ?? 0}'),
-                    ),
-                  );
-                }
-                return Container();
-              })),
+      child: MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (context) => AppDataLoadCubit(),
+            lazy: false,
+          ),
+          BlocProvider(create: (context) => SplashCubit())
+        ],
+        child: const App(),
+      ),
     );
   }
 }

@@ -1,21 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gobook/src/splash/page/splash_page.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
 
   @override
-  State<App> createState() => _MyWidgetState();
+  State<App> createState() => _AppState();
 }
 
-class _MyWidgetState extends State<App> {
+class _AppState extends State<App> {
   late GoRouter router;
   @override
   void initState() {
     super.initState();
     router = GoRouter(
-      routes: [],
       initialLocation: '/',
+      routes: [
+        GoRoute(
+          path: '/',
+          builder: (context, state) => SplashPage(),
+        )
+      ],
     );
   }
 
