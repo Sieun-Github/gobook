@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:gobook/src/init/page/init_page.dart';
+import 'package:gobook/src/root/page/root_page.dart';
 import 'package:gobook/src/splash/page/splash_page.dart';
 
 class App extends StatefulWidget {
@@ -19,8 +21,8 @@ class _AppState extends State<App> {
       routes: [
         GoRoute(
           path: '/',
-          builder: (context, state) => SplashPage(),
-        )
+          builder: (context, state) => const RootPage(),
+        ),
       ],
     );
   }
